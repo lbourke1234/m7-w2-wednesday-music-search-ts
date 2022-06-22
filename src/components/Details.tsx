@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Track } from '../types/Track'
-import { Card, Button } from 'react-bootstrap'
+import { Card, Container, Row, Col, Button } from 'react-bootstrap'
 
 const Details = () => {
   const [track, setTrack] = useState<Track>()
@@ -21,14 +21,27 @@ const Details = () => {
     fetchTrack(params.id)
   }, [params.id])
   return track ? (
-    <Card className="details-card">
-      <Card.Img variant="top" src={track?.album.cover} />
-      <Card.Body>
-        <Card.Title>{track.title}</Card.Title>
-        <Card.Text>{track.artist.name}</Card.Text>
-        <Card.Text>{track.album.title}</Card.Text>
-      </Card.Body>
-    </Card>
+    <Container>
+      <Row className="go-home-row">
+        <Link to={'/'}>
+          <Button className="go-home-btn" variant="light">
+            Go Home
+          </Button>{' '}
+        </Link>
+      </Row>
+      <Row>
+        <Col className="details-col">
+          <Card className="details-card">
+            <Card.Img variant="top" src={track?.album.cover} />
+            <Card.Body>
+              <Card.Title>{track.title}</Card.Title>
+              <Card.Text>{track.artist.name}</Card.Text>
+              <Card.Text>{track.album.title}</Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   ) : (
     <div></div>
   )

@@ -1,5 +1,5 @@
 body {
-  background-color: #d8e3e8;
+  background-color: #f6f6f6;
 }
 .card {
   border-radius: 20px;
@@ -18,4 +18,21 @@ body {
 .details-card {
   margin-bottom: 30px;
   text-align: center;
+  width: 800px;
+}
+.details-card img {
+  width: 800px;
+}
+.details-col {
+  display: flex;
+  justify-content: center;
+}
+.go-home-btn {
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 5px;
+}
+.go-home-row {
+  display: flex;
+  justify-content: center;
 }
