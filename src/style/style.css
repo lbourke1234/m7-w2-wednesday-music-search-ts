@@ -1,0 +1,21 @@
+body {
+  background-color: #d8e3e8;
+}
+.card {
+  border-radius: 20px;
+  text-align: center;
+}
+.card-img-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+#search-text {
+  text-align: center;
+  padding: 22px;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+.details-card {
+  margin-bottom: 30px;
+  text-align: center;
+}
